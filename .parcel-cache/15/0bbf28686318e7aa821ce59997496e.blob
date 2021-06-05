@@ -1,0 +1,43 @@
+var helpers = require("../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _react = require("react");
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  var _reactDom = require("react-dom");
+  var _reactDomDefault = _parcelHelpers.interopDefault(_reactDom);
+  const Pet = props => {
+    return (
+      /*#__PURE__*/_reactDefault.default.createElement("div", {}, [/*#__PURE__*/_reactDefault.default.createElement("h2", {}, props.name), /*#__PURE__*/_reactDefault.default.createElement("h3", {}, props.animal), /*#__PURE__*/_reactDefault.default.createElement("h3", {}, props.breed)])
+    );
+  };
+  _c = Pet;
+  const App = () => {
+    return (
+      /*#__PURE__*/_reactDefault.default.createElement("div", {}, [/*#__PURE__*/_reactDefault.default.createElement("h1", {}, "Adopt Me!"), /*#__PURE__*/_reactDefault.default.createElement(Pet, {
+        name: "Luna",
+        animal: "Dog",
+        breed: "Havanese"
+      }), /*#__PURE__*/_reactDefault.default.createElement(Pet, {
+        name: "Pepper",
+        animal: "Bird",
+        breed: "Cockatiel"
+      }), /*#__PURE__*/_reactDefault.default.createElement(Pet, {
+        name: "Sudo",
+        animal: "Dog",
+        breed: "Wheaton Terrier"
+      })])
+    );
+  };
+  _c2 = App;
+  _reactDomDefault.default.render(/*#__PURE__*/_reactDefault.default.createElement(App), document.getElementById("root"));
+  var _c, _c2;
+  $RefreshReg$(_c, "Pet");
+  $RefreshReg$(_c2, "App");
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

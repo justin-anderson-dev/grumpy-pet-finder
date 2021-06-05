@@ -1,0 +1,35 @@
+var helpers = require("../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _react = require("react");
+  const Pet = props => {
+    return _react.React.createElement("div", {}, [_react.React.createElement("h2", {}, props.name), _react.React.createElement("h3", {}, props.animal), _react.React.createElement("h3", {}, props.breed)]);
+  };
+  _c = Pet;
+  const App = () => {
+    return _react.React.createElement("div", {}, [_react.React.createElement("h1", {}, "Adopt Me!"), _react.React.createElement(Pet, {
+      name: "Luna",
+      animal: "Dog",
+      breed: "Havanese"
+    }), _react.React.createElement(Pet, {
+      name: "Pepper",
+      animal: "Bird",
+      breed: "Cockatiel"
+    }), _react.React.createElement(Pet, {
+      name: "Sudo",
+      animal: "Dog",
+      breed: "Wheaton Terrier"
+    })]);
+  };
+  _c2 = App;
+  _react.ReactDOM.render(_react.React.createElement(App), document.getElementById("root"));
+  var _c, _c2;
+  $RefreshReg$(_c, "Pet");
+  $RefreshReg$(_c2, "App");
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
