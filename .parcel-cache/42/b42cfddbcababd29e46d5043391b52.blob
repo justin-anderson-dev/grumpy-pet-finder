@@ -1,9 +1,0 @@
-var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
-_parcelHelpers.defineInteropFlag(exports);
-function Pet({name, animal, breed}) {
-  return React.createElement("div", {}, [React.createElement("h2", {}, name), React.createElement("h3", {}, animal), React.createElement("h3", {}, breed)]);
-}
-exports.default = Pet;
-_c = Pet;
-var _c;
-$RefreshReg$(_c, "Pet");

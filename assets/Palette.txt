@@ -1,0 +1,36 @@
+/* CSS HEX */
+--genoa: #14857e;
+--concrete: #f2f2f2;
+--mirage: #121828;
+--casablanca: #f9b451;
+--cascade: #96a5a8;
+--silver-sand: #c1c3c4;
+--deep-blush: #df6494;
+--corvette: #f9cf95;
+--shocking: #e19fb2;
+
+
+/* SCSS HEX */
+$genoa: #14857e;
+$concrete: #f2f2f2;
+$mirage: #121828;
+$casablanca: #f9b451;
+$cascade: #96a5a8;
+$silver-sand: #c1c3c4;
+$deep-blush: #df6494;
+$corvette: #f9cf95;
+$shocking: #e19fb2;
+
+
+/* SCSS RGB */
+--genoa: rgba(20,133,126,1);
+--concrete: rgba(242,242,242,1);
+--mirage: rgba(18,24,40,1);
+--casablanca: rgba(249,180,81,1);
+--cascade: rgba(150,165,168,1);
+--silver-sand: rgba(193,195,196,1);
+--deep-blush: rgba(223,100,148,1);
+--corvette: rgba(249,207,149,1);
+--shocking: rgba(225,159,178,1);
+
+

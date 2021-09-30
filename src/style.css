@@ -1,37 +1,52 @@
 * {
   box-sizing: border-box;
-  color: #333;
+  color: #4d4751;
 }
 
 body {
-  background-color: #81a69b;
-  /* background-image: url(http://pets-images.dev-apis.com/pets/wallpaperB.jpg); */
+  background-color: #efeef1;
   margin: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Source Sans Pro", Verdana, sans-serif;
+}
+
+.background {
+  padding-top: 2rem;
+}
+
+.splash-screen {
+  background-color: #fff;
+  border-radius: 6px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  width: 1100px;
+  margin: 2rem auto;
+  padding: 20px 0px 0px 0px;
 }
 
 .search-params {
-  width: 1100px;
+  display: flex;
+  width: 95%;
+  max-width: 1100px;
+  height: full;
   margin: 0 auto;
 }
 
 .search-params form {
   border-radius: 6px;
-  background: #faeff0;
-  box-shadow: 0px 0px 12px #aaa, -0px -0px 12px #fff;
-  width: 360px;
+  background: #fff;
+  -webkit-box-shadow: 0 1px 4px rgb(0 0 0 / 10%);
+  box-shadow: 0 1px 4px rgb(0 0 0 / 10%);
+  width: 33%;
+  height: fit-content;
   margin: 0px 25px 0px 0px;
   padding: 35px 15px 15px 15px;
-  float: left;
 }
 
-.search {
+.results {
   border-radius: 6px;
-  background: #faeff0;
-  box-shadow: 0px 0px 12px #aaa, -0px -0px 12px #fff;
-  width: 715px;
-  padding: 15px;
-  float: left;
+  /* box-shadow: 0px 0px 12px #aaa, -0px -0px 12px #fff; */
+  width: 66%;
   margin-bottom: 25px;
 }
 
@@ -41,17 +56,19 @@ body {
   padding: 15px;
   margin-bottom: 25px;
   border-radius: 6px;
-  background: #faeff0;
+  background: #fff;
   box-shadow: 0px 0px 12px #aaa, -0px -0px 12px #fff;
 }
 
 .pet {
+  background: #fff;
+  border-radius: 12px;
   width: 100%;
-  height: 130px;
-  display: block;
+  height: fit-content;
+  display: flex;
   overflow: hidden;
-  margin: 25px 0;
-  border-bottom: #333 2px solid;
+  margin: 0 0 1rem 0;
+  text-decoration: none;
 }
 
 .pet img {
@@ -60,10 +77,9 @@ body {
 }
 
 .info {
-  float: left;
   width: 80%;
   height: 100px;
-  padding-top: 10px;
+  padding-top: 1.5rem;
   flex-direction: column;
   justify-content: space-around;
 }
@@ -72,8 +88,7 @@ body {
   clip-path: circle(50% at 50% 50%);
   width: 100px;
   height: 100px;
-  float: left;
-  margin: 0px 20px 0px 10px;
+  margin: 1rem 1rem 1rem 0.5rem;
 }
 
 .pet h1 {
@@ -89,14 +104,7 @@ body {
 
 header > a,
 #root > div > h1 {
-  display: inline-block;
-  background-image: url(http://static.frontendmasters.com/resources/2019-05-02-complete-intro-react-v5/image-logo.png);
-  filter: brightness(150%);
-  width: 279px;
-  height: 76px;
-  overflow: hidden;
-  text-indent: -9999px;
-  margin: 20px 0;
+  margin: 0 0;
 }
 
 .pet h2 {
@@ -108,8 +116,7 @@ header > a,
 }
 
 header a {
-  color: #333;
-  font-size: 3px;
+  font-size: 32px;
   text-decoration: none;
   font-weight: bold;
   display: block;
@@ -117,12 +124,14 @@ header a {
 }
 
 header {
+  background-color: #fff;
+  border-radius: 6px;
   display: flex;
   align-content: center;
   justify-content: center;
   width: 1100px;
-  margin: 0 auto;
-  padding: 20px 0px 0px 0px;
+  margin: 0 auto 2rem auto;
+  padding: 0;
 }
 
 .details p {
@@ -176,7 +185,7 @@ header {
 
 .search-params label {
   display: block;
-  width: 60px;
+  /* width: 60px; */
 }
 
 .search-params input,
@@ -184,7 +193,7 @@ header {
   margin-bottom: 30px;
   font-size: 18px;
   height: 30px;
-  width: 325px;
+  width: 100%;
 }
 
 .search-params button,
@@ -250,11 +259,12 @@ header {
     align-content: center;
     justify-content: center;
     width: 95%;
-    margin: 0 auto;
+    margin: 2rem auto;
     padding: 20px 0px 0px 0px;
   }
 
-  .search-params {
+  .search-params,
+  .splash-screen {
     width: 95%;
   }
 
@@ -300,6 +310,15 @@ header {
 @media only screen and (max-width: 945px) {
   .search-params {
     width: 95%;
+    flex-direction: column;
+  }
+
+  .search-params form {
+    width: 100%;
+  }
+
+  .results {
+    width: 100%;
   }
 
   .search {
@@ -308,19 +327,6 @@ header {
 }
 
 @media only screen and (max-width: 600px) {
-  .pet {
-    height: 200px;
-  }
-
-  .info {
-    width: 100%;
-    text-align: center;
-  }
-
-  .image-container {
-    margin: 0 auto;
-    float: none;
-  }
   .carousel-smaller > img {
     width: 60px;
     height: 60px;
