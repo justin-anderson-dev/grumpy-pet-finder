@@ -9,19 +9,41 @@ body {
   font-family: "Source Sans Pro", Verdana, sans-serif;
 }
 
-.background {
-  padding-top: 2rem;
-}
-
 .splash-screen {
   background-color: #fff;
-  border-radius: 6px;
+  border-radius: 0 0 6px 6px;
   display: flex;
+  flex-direction: row;
   align-content: center;
   justify-content: center;
   width: 1100px;
-  margin: 2rem auto;
-  padding: 20px 0px 0px 0px;
+  margin: 1rem auto 2rem auto;
+  padding: 2rem;
+  -webkit-box-shadow: 0 1px 4px rgb(0 0 0 / 10%);
+  box-shadow: 0 1px 4px rgb(0 0 0 / 10%);
+}
+
+.splash-images,
+.splash-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.splash-images {
+  width: 33%;
+}
+
+.splash-copy {
+  width: 66%;
+}
+
+.splash-screen figure {
+  max-width: 100%;
+}
+
+figure > img {
+  width: 100%;
 }
 
 .search-params {
@@ -39,15 +61,15 @@ body {
   box-shadow: 0 1px 4px rgb(0 0 0 / 10%);
   width: 33%;
   height: fit-content;
-  margin: 0px 25px 0px 0px;
-  padding: 35px 15px 15px 15px;
+  margin: 1rem 1rem 0 0;
+  padding: 2rem 1rem 1rem 1rem;
 }
 
 .results {
   border-radius: 6px;
   /* box-shadow: 0px 0px 12px #aaa, -0px -0px 12px #fff; */
   width: 66%;
-  margin-bottom: 25px;
+  margin: 1rem 0 0 0;
 }
 
 .details {
@@ -62,13 +84,16 @@ body {
 
 .pet {
   background: #fff;
-  border-radius: 12px;
+  -webkit-box-shadow: 0 1px 4px rgb(0 0 0 / 10%);
+  box-shadow: 0 1px 4px rgb(0 0 0 / 10%);
+  border-radius: 6px;
   width: 100%;
   height: fit-content;
   display: flex;
   overflow: hidden;
   margin: 0 0 1rem 0;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .pet img {
@@ -125,13 +150,24 @@ header a {
 
 header {
   background-color: #fff;
-  border-radius: 6px;
+  -webkit-box-shadow: 0 1px 4px rgb(0 0 0 / 10%);
+  box-shadow: 0 1px 4px rgb(0 0 0 / 10%);
+  border-radius: 6px 6px 0 0;
   display: flex;
   align-content: center;
-  justify-content: center;
   width: 1100px;
-  margin: 0 auto 2rem auto;
-  padding: 0;
+  margin: 1rem auto 0 auto;
+  padding: 1rem 2rem;
+}
+
+header h1 {
+  margin: 0;
+}
+
+header::after {
+  height: 1rem;
+  width: 100%;
+  background-color: #6504b5;
 }
 
 .details p {
@@ -241,11 +277,11 @@ header {
 
 #modal > div {
   background-color: white;
-  max-width: 500px;
+  max-width: 1100px;
   padding: 15px;
   text-align: center;
   border-radius: 30px;
-  background: #faeff0;
+  background: #efeef1;
 }
 
 #modal .buttons button {
@@ -257,19 +293,12 @@ header {
   header {
     display: flex;
     align-content: center;
-    justify-content: center;
     width: 95%;
-    margin: 2rem auto;
-    padding: 20px 0px 0px 0px;
   }
 
   .search-params,
   .splash-screen {
     width: 95%;
-  }
-
-  .search-params form {
-    margin-bottom: 20px;
   }
 
   .search {

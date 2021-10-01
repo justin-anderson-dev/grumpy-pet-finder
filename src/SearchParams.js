@@ -22,12 +22,12 @@ const SearchParams = () => {
       .search({
         type: "Cat",
         location: location || "90066",
-        distance: "25",
+        distance: "50",
         good_with_cats: false,
         good_with_dogs: false,
         good_with_children: false,
         page: 1,
-        limit: 10,
+        limit: 100,
       })
       .then((resp) => {
         console.log("api response ->", resp.data.animals);
