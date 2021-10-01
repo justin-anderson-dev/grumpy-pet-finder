@@ -1,15 +1,9 @@
 import { useState, useEffect } from "react";
-import { withRouter, useParams } from "react-router-dom";
 import { Client } from "@petfinder/petfinder-js";
 import Carousel from "./Carousel";
-import ErrorBoundary from "./ErrorBoundary";
-import Modal from "./Modal";
 
-function Details() {
-  const { id } = useParams();
-
+export default function Details({ id, handleToggleModal }) {
   const [loading, setLoading] = useState(true);
-  const [showModal, setShowModal] = useState(false);
   const [pet, setPet] = useState({});
 
   async function getPetDetails() {
@@ -27,10 +21,6 @@ function Details() {
       .then(() => {
         setLoading(false);
       });
-  }
-
-  function handleToggleModal() {
-    setShowModal(!showModal);
   }
 
   function handleAdopt() {
@@ -51,29 +41,10 @@ function Details() {
       <h1>{pet.name}</h1>
       <h2>{`${pet.age} grumpy cat in ${pet.contact.address.city}, ${pet.contact.address.state}`}</h2>
       <p>{pet.description}</p>
-      <button onClick={handleToggleModal}>More about {pet.name}</button>
-
-      {showModal ? (
-        <Modal>
-          <div>
-            <h2>Get more info and adopt {pet.name}?</h2>
-            <div className="buttons">
-              <button onClick={handleAdopt}>Yes</button>
-              <button onClick={handleToggleModal}>No</button>
-            </div>
-          </div>
-        </Modal>
-      ) : null}
+      <div className="buttons">
+        <button onClick={handleAdopt}>Meet {pet.name}</button>
+        <button onClick={handleToggleModal}>Close</button>
+      </div>
     </div>
-  );
-}
-
-const DetailsWithRouter = withRouter(Details);
-
-export default function DetailsWithErrorBoundary(props) {
-  return (
-    <ErrorBoundary>
-      <DetailsWithRouter {...props} />
-    </ErrorBoundary>
   );
 }
