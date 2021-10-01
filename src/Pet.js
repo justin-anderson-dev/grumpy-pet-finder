@@ -14,11 +14,11 @@ export default function Pet({ age, name, heroPic, location, id }) {
   }
 
   return (
-    <div id={`pet-${id}`} className="pet" onClick={handleToggleModal}>
-      <div className="image-container">
+    <div id={`pet-${id}`} className="pet">
+      <div className="image-container" onClick={handleToggleModal}>
         <img src={heroPic} alt={name} />
       </div>
-      <div className="info">
+      <div className="info" onClick={handleToggleModal}>
         <h1>{name}</h1>
         <h2>{`${age} grumpy cat in ${location}`}</h2>
       </div>
