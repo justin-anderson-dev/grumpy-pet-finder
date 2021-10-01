@@ -1,10 +1,15 @@
 import Pet from "./Pet";
+import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 
 export default function Results({ pets }) {
   return (
     <div className="results">
       {!pets.length ? (
-        <h2>No grumpy cats yet ... </h2>
+        <SkeletonTheme color="#6504b5" highlightColor="#c1c3c4">
+          {[...new Array(4)].map((_, index) => (
+            <Skeleton key={index} count={1} height={120} />
+          ))}
+        </SkeletonTheme>
       ) : (
         pets.map((pet) => (
           <Pet

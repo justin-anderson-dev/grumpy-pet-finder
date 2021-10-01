@@ -1,12 +1,20 @@
-import { Link } from "react-router-dom";
+import Modal from "./Modal";
+import Details from "./Details";
+import { useState } from "react";
 
 export default function Pet({ age, name, heroPic, location, id }) {
+  const [showModal, setShowModal] = useState(false);
+
+  function handleToggleModal() {
+    setShowModal(!showModal);
+  }
+
   if (!heroPic) {
     let heroPic = "http://pets-images.dev-apis.com/pets/none.jpg";
   }
 
   return (
-    <Link to={`/details/${id}`} className="pet">
+    <div id={`pet-${id}`} className="pet" onClick={handleToggleModal}>
       <div className="image-container">
         <img src={heroPic} alt={name} />
       </div>
@@ -14,6 +22,14 @@ export default function Pet({ age, name, heroPic, location, id }) {
         <h1>{name}</h1>
         <h2>{`${age} grumpy cat in ${location}`}</h2>
       </div>
-    </Link>
+
+      {showModal ? (
+        <Modal>
+          <div>
+            <Details id={id} handleToggleModal={handleToggleModal} />
+          </div>
+        </Modal>
+      ) : null}
+    </div>
   );
 }
