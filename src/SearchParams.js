@@ -21,7 +21,7 @@ const SearchParams = () => {
     client.animal
       .search({
         type: "Cat",
-        location: location || "90066",
+        location: location || "Los Angeles, CA",
         distance: "50",
         good_with_cats: false,
         good_with_dogs: false,
@@ -53,7 +53,7 @@ const SearchParams = () => {
           />
         </label>
 
-        <button>Find grumpy cats</button>
+        <button className="primary">FIND GRUMPY CATS</button>
       </form>
       <Results pets={pets} />
     </div>

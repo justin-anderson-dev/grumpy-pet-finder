@@ -14,10 +14,12 @@ export default function Results({ pets }) {
         pets.map((pet) => (
           <Pet
             age={pet.age}
+            size={pet.size}
+            breed={pet.breeds?.primary}
             key={pet.id}
             name={pet.name}
             heroPic={pet.primary_photo_cropped?.full}
-            location={`${pet.contact.address.city}, ${pet.contact.address.state} ${pet.contact.address.postcode}`}
+            location={`${pet.contact.address.city}, ${pet.contact.address.state}`}
             id={pet.id}
           />
         ))

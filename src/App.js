@@ -11,7 +11,7 @@ const App = () => {
       <Router>
         <header>
           <Link to="/search">
-            <h1>Grumpy Cat Finder</h1>
+            <h1>grumpyCatFinder</h1>
           </Link>
         </header>
         <Switch>

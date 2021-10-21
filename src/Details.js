@@ -38,12 +38,19 @@ export default function Details({ id, handleToggleModal }) {
   ) : (
     <div className="details">
       <Carousel photos={pet.photos} />
-      <h1>{pet.name}</h1>
-      <h2>{`${pet.age} grumpy cat in ${pet.contact.address.city}, ${pet.contact.address.state}`}</h2>
-      <p>{pet.description}</p>
-      <div className="buttons">
-        <button onClick={handleAdopt}>Meet {pet.name}</button>
-        <button onClick={handleToggleModal}>Close</button>
+      <div className="details-copy">
+        <h1>{pet.name}</h1>
+        <h2>{`${pet.age} grumpy cat in ${pet.contact.address.city}, ${pet.contact.address.state}`}</h2>
+        <p>{pet.description}</p>
+        <div className="cta-block">
+          <h2>Want to know more about {pet.name}?</h2>
+          <div className="buttons">
+            <button className="primary" onClick={handleAdopt}>
+              MEET {pet.name.toUpperCase()}
+            </button>
+            <button onClick={handleToggleModal}>CLOSE</button>
+          </div>
+        </div>
       </div>
     </div>
   );
