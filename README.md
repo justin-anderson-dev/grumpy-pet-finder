@@ -60,5 +60,5 @@ This MVP release does the job: it searches for grumpy cats within a 50-mile radi
 
 Thanks Brian Holt and Frontend Masters for the excellent React classes.
 
-- [LINK TK](https://github.com)
-- [LINK TK](https://github.com)
+- [Intro to React](https://github.com/btholt/complete-intro-to-react-v6)
+- [Frontend Masters](https://github.com/FrontendMasters)
