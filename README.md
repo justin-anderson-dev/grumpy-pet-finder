@@ -10,11 +10,14 @@ Grumpy Cat Finder will find cats near you who don't like kids, don't like dogs, 
 
 I started this project as part of a class I was taking on React hooks. I expanded it to 1. make calls to the public Petfinder API, and 2. blend well with the Petfinder UI.
 
-SPLASH IMAGE TK
+<img width="1439" alt="grumpcatfinder-splash" src="https://user-images.githubusercontent.com/42009003/138529901-007bd29c-6993-4632-b09f-39ce9f5826e1.png">
+<img width="1439" alt="grumpycatfinder-results" src="https://user-images.githubusercontent.com/42009003/138529910-477ffdb7-204a-413b-92a2-e1ca4137281e.png">
+<img width="1439" alt="grumpycatfinder-detail" src="https://user-images.githubusercontent.com/42009003/138529915-ec9eb130-8c9c-4aa5-aa74-95877a78893a.png">
 
-RESULTS IMAGE TK
+And the layout is responsive for mobile users.
 
-DETAIL IMAGE TK
+<img width="494" alt="grumpycatfinder-responsive1" src="https://user-images.githubusercontent.com/42009003/138529972-27704268-eebc-4aa5-ab13-c3ddd966311f.png">
+<img width="494" alt="grumpycatfinder-responsive2" src="https://user-images.githubusercontent.com/42009003/138529989-b50fc0f4-8d5e-40aa-91ab-09e925c40fbc.png">
 
 ## Getting Started
 
