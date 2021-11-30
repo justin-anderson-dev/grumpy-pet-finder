@@ -2,7 +2,16 @@ import Modal from "./Modal";
 import Details from "./Details";
 import { useState } from "react";
 
-export default function Pet({ age, name, size, breed, heroPic, location, id }) {
+export default function Pet({
+  age,
+  name,
+  size,
+  breed,
+  heroPic,
+  location,
+  id,
+  classes,
+}) {
   const [showModal, setShowModal] = useState(false);
 
   function handleToggleModal() {
@@ -14,7 +23,7 @@ export default function Pet({ age, name, size, breed, heroPic, location, id }) {
   }
 
   return (
-    <div id={`pet-${id}`} className="pet">
+    <div id={`pet-${id}`} className={classes + " pet"}>
       <div className="image-container" onClick={handleToggleModal}>
         <img src={heroPic} alt={name} />
       </div>
